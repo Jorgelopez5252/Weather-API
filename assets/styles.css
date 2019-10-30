@@ -4,6 +4,12 @@ header {
     text-align: center;
     color: white;
 }
-#emptyDiv{
+/* #emptyDiv{
     background-color: blue;
+} */
+
+ul
+{
+  display:flex;  
+  list-style:none;
 }
