@@ -12,7 +12,14 @@ $(document).ready(function(){
             dataType: "json",
             success: function(data){
                 // was able to console log lat and long//
-                console.log(data);
+                var dataString= data(toString)
+                function(dataString){
+                    for (let i = 0; i < .length; i++) {
+                        const element = array[i];
+                        
+                    }
+
+                };
             }
         })
     }
