@@ -11,9 +11,11 @@ Weather API
 - [Link](#Link)
 ​
 ### Description
-A mobile responsive weather api
+A mobile responsive weather api that is meant to take user input and display weather details and patterns. 
 ### Technologies-Libraries
-
+Ajax calls
+api calls
+Weather dashboard
 ​
 ### Screenshots
 ​
