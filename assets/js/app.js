@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  $("#search-button").on("click", function () {
+$(document).ready(function() {
+  $("#search-button").on("click", function() {
     //get the value from our input form
     var searchTerm = $("#search-value").val();
     //call the weatherAPI function and pass in our searchTerm
@@ -15,7 +15,7 @@ $(document).ready(function () {
         "https://api.openweathermap.org/data/2.5/weather?q=" +
         searchTerm +
         "&appid=66fa9b97478bf2b9d156815cabfc54c0&units=imperial"
-    }).then(function (response) {
+    }).then(function(response) {
       const city = response.name;
       const wind = response.wind.speed;
       const humidity = response.main.humidity;
@@ -35,7 +35,7 @@ $(document).ready(function () {
         "http://api.openweathermap.org/data/2.5/forecast?q=" +
         searchTerm +
         "&appid=7ba67ac190f85fdba2e2dc6b9d32e93c&units=imperial"
-    }).then(function (response) {
+    }).then(function(response) {
       //the response returns an array that has a all of the forcast items.  we set that = to a variable
       const forcast = response.list;
       console.log(forcast[0]);
@@ -56,10 +56,12 @@ $(document).ready(function () {
           const card = $("<div>").addClass("card");
 
           //NEED TO DO create the body of the card with jquery///
-          const body = $("<body>").addClass("body");
+          const body = $("<body>").addClass("card-body");
 
           //creating the card-title text with jquery
-          const cardDate = $("<h5>").addClass("card-title").text(date);
+          const cardDate = $("<h5>")
+            .addClass("card-title")
+            .text(date);
 
           //creating the icon image with jquery
           const img = $("<img>").attr(
@@ -68,10 +70,14 @@ $(document).ready(function () {
           );
 
           //NEED TO DO create the temperature p tag with jquery similar to cardDate but you will be adding ptag
-          const ptemp = $("<p>").addClass("card-title").text(temp);
+          const ptemp = $("<p>")
+            .addClass("card-text")
+            .text("temp" + temp);
 
           //NEED TO DO create the humidity p tag with jquery
-          const phumidity = $("<p>").addClass("card-title").text(humidity);
+          const phumidity = $("<p>")
+            .addClass("card-text")
+            .text("humidity" + humidity);
 
           //append all of date, img, p tags to the card body
           body.append(cardDate, img, ptemp, phumidity);
@@ -80,14 +86,10 @@ $(document).ready(function () {
           card.append(body);
 
           //NEED TO DO append card to column
-          body.append(col);
+          col.append(card);
 
           //NEED TO DO append the col to the forcast div in the html
-          $(document).ready(function () {
-            $("#forecast").click(function () {
-              $("p").append("<p>Append text</p>.");
-            });
-          });
+          $("#forecast").append(col)
         }
       }
     });
