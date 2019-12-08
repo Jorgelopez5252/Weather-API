@@ -2,75 +2,63 @@
 <html lang="en">
 
 <head>
-    <!--meta-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--bootstrap css-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--css-->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Syncopate&display=swap" rel="stylesheet">
-    <!--font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--title-->
-    <title>Weather Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
 </head>
 
 <body>
-    <div class="row-0">
-        <div class="jumbotron jumbotron-fluid">
-            Weather Dashboard</div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <h6>Search for a city</h6>
-                <div class="input-group md-form form-sm form-2 pl-0">
-                    <input class="form-control my-0 py-1 amber-border" type="text" id="input" name="searchText"
-                        placeholder="Search" aria-label="Search">
-                    <div class="input-group-append">
-                        <button id="addcity" class="btn btn-outline-secondary" type="submit"><i
-                                class="fa fa-search text-grey"></i></button>
-                        <!--use my location button-->
-                        <button class="btn btn-outline-secondary" type="button" id="location"><i
-                                class="fa fa-map-marker"></i></button>
-                    </div>
-                </div>
-                <div id="pcities">
-                </div>
-            </div>
+  <header>Weather Dashboard</header>
+  <div class="container">
 
-    
+    <div class="row">
 
-            <!--previous cities-->
-            <div class="col-8">
-                <!--current weather-->
-                <div id="current"></div>
-            </div>
-            <div class="row-2">
-                <!--5 day title-->
-                <h4 id="h4"></h4>
-                <!--5 day forcast-->
-                <div id="forecast"></div>
-            </div>
+      <div class="col-3">
+        <h1>Search For a City</h1>
+        <div class="form-inline form-group">
+          <input type="text" id="search-value" class="form-control" />
+          <button class="btn btn-primary" id="search-button">Search</button>
         </div>
+      </div>
+
+      <div class="col-9">
+
+        <div class="row">
+          <div>
+            <h2 id="city"></h2>
+            <h4 id="wind"></h4>
+            <h4 id="humidity"></h4>
+            <h4 id="temp"></h4>
+          </div>
+        </div>
+
+        <!-- Forecast starts here -->
+        <div class="row" id="forecast">
+
+        </div>
+
+        <!-- <div class="row" id="forecast">Day 2
+        </div>
+
+        <div class="row" id="forecast">Day 3
+        </div>
+
+        <div class="row" id="forecast">Day 4
+        </div>
+
+        <div class="row" id="forecast"> Day 5
+        </div> -->
+
+      </div>
     </div>
-    <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!--popper-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
-    <!--stackpath-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
-    <!--javascript-->
-    <script src="assets/js/script.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
