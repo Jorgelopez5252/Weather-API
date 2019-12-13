@@ -32,7 +32,7 @@ $(document).ready(function() {
     $.ajax({
       method: "GET",
       url:
-        "http://api.openweathermap.org/data/2.5/forecast?q=" +
+        "https://api.openweathermap.org/data/2.5/forecast?q=" +
         searchTerm +
         "&appid=7ba67ac190f85fdba2e2dc6b9d32e93c&units=imperial"
     }).then(function(response) {
@@ -66,7 +66,7 @@ $(document).ready(function() {
           //creating the icon image with jquery
           const img = $("<img>").attr(
             "src",
-            "http://openweathermap.org/img/w/" + icon + ".png"
+            "https://openweathermap.org/img/w/" + icon + ".png"
           );
 
           //NEED TO DO create the temperature p tag with jquery similar to cardDate but you will be adding ptag
